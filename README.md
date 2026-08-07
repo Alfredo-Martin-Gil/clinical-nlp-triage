@@ -1,39 +1,30 @@
-# Clinical NLP Triage (Synthetic Data) — Red-Flag Extractor
+# Clinical NLP Triage — Historical Repository
 
-**Goal:** surface red-flag terms from clinical case notes to support tele-triage decisions.  
-**Author:** Alfredo Martín Gil, MD — Emergency & Dialysis | Healthcare AI & Telemedicine | Patient Safety
+> [!IMPORTANT]
+> **Historical status:** this repository is retained as an early project record. It is not the current implementation and should not be used to assess the present state of the work.
 
-## Problem
-Case notes are long; telemedicine teams need a fast, safe way to spot risk signals during triage.
+## Current project
 
-## Data (Privacy & Ethics)
-- Synthetic notes only (no PHI).
-- Public symptom/term dictionaries + handcrafted templates.
-- This repo is for education/prototyping, *not* clinical deployment.
+The maintained research prototype is:
 
-## Method (baseline)
-- Simple NLP pipeline (regex/keyword lists) + optional ML baseline (bag-of-words/LogReg).
-- Output: list of red-flag terms with spans + simple risk counter.
+**[clinical-nlp-triage-open-source](https://github.com/Alfredo-Martin-Gil/clinical-nlp-triage-open-source)**
 
-## Metrics
-- Precision/Recall on a small labeled synthetic set.
-- Throughput: notes/minute on typical hardware.
-- Error analysis: false positives/negatives table.
+That repository contains the current code, synthetic-data evaluation, tests, traceability fields, documentation, and explicit safety and validation boundaries.
 
-## Limitations & Safety
-- Not a diagnostic tool; *do not* deploy on real patients.
-- Bias risks (language/age/phrasing); mitigation via lexicon review and threshold tuning.
-- Requires clinician validation before any operational use.
+## What this repository represents
 
-## How to Run (Colab-ready)
-1. Open the Colab notebook `clinical_nlp_triage.ipynb`.
-2. Run cells top-to-bottom (no external data needed).
-3. Inspect outputs; adjust lexicon/thresholds in the config section.
+This repository records an earlier project description. Capabilities described in its previous README were not accompanied here by the announced notebook, metrics, or executable implementation. It is therefore not included as a separate portfolio project.
 
-## Roadmap
-- Add simple negation handling (e.g., "no chest pain").
-- Try lightweight embeddings (optional).
-- Export JSON for dashboard integration.
+The repository is preserved for version-history transparency and redirects reviewers to the maintained implementation.
 
----
-*Remote & Toronto-ready. Feedback and collaborations welcome.*
+## Representation boundaries
+
+Neither this historical repository nor the maintained prototype is evidence of:
+
+- clinical validation, safety, or effectiveness;
+- deployment or patient use;
+- implementation in a hospital, emergency service, or telemedicine workflow;
+- improved outcomes or reduced clinical risk;
+- medical-device status, regulatory compliance, or production readiness.
+
+The maintained project uses synthetic data and remains a research prototype. It must not be used for real-patient assessment, triage, diagnosis, treatment, or reassurance.
